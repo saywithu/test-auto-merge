@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-16.04
     steps:
       - name: Checkout source code.   # 레포지토리 체크아웃
-        uses: actions/checkout@release
+        uses: actions/checkout@master
       - run: git pull master release
 #      - name: Action automerge
 #        uses: ./.github/actions/auto-merge@master
