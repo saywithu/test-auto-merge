@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Checkout source code.   # 레포지토리 체크아웃
         uses: actions/checkout@master
-      - uses: ./.github/actions/automerge@master
+      - uses: ./.github/actions/automerge
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }} # The `GITHUB_TOKEN` secret.
           release: release # The `release` branch.
