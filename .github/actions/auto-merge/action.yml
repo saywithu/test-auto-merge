@@ -1,0 +1,6 @@
+name: 'auto-merge'
+description: 'Outputs debug information'
+author: 'jeffrafter'
+runs:
+  using: 'node12'
+  main: './automerge.js'
