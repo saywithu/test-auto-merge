@@ -15,5 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: automerge
-        run: echo Test...
+      - name: automerge1
+        run: echo Test11...
+      - name: automerge2
+        run: echo Test22...
