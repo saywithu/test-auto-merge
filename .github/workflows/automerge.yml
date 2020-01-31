@@ -18,4 +18,4 @@ jobs:
       - name: automerge1
         run: echo Test11...
       - name: automerge2
-        run: git pull origin/master release
+        uses: "pascalgn/automerge-action@9d655352861c757731df72b6ac21d65fdf6d92ee"
