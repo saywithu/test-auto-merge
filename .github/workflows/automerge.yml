@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-16.04
     steps:
       - name: Action automerge
-        uses: saywithu/gitflow-action@0.0.4
+        uses: saywithu/gitflow-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }} # The `GITHUB_TOKEN` secret.
           release: release # The `release` branch.
