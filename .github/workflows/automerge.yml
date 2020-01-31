@@ -1,8 +1,19 @@
 name: automerge
-on: push
-  branches:
-    - master
+
+on:
+  push:
+    branches:
+      - master
+
+  pull_request:
+    branches:
+      - master
+
 jobs:
-  create-auto-pr:
+  build:
     name: Gitflow Automation
-    run: git pull master release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: automerge
+        run: echo Test...
