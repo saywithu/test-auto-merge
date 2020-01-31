@@ -14,7 +14,8 @@ jobs:
     name: automerge
     runs-on: ubuntu-16.04
     steps:
-      - uses: saywithu/test-auto-merge/actions/automerge@master
+      - uses: actions/checkout@master
+      - uses: ./actions/automerge@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }} # The `GITHUB_TOKEN` secret.
           release: release # The `release` branch.
