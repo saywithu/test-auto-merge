@@ -1,0 +1,14 @@
+name: automerge
+on: push
+jobs:
+  create-auto-pr:
+    name: Gitflow Automation
+    runs-on: ubuntu-latest
+    env:
+    steps:
+      - name: automerge
+        uses: peoplefund-tech/gitflow-automation@v0.1.1
+        env:
+          TARGET_BRANCH: "release"
+          BASE_BRANCH: "master"
+          GITHUB_TOKEN: ${{ secrets.MERGE_GITHUB_TOKEN }}
