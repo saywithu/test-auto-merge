@@ -14,8 +14,9 @@ jobs:
     name: automerge
     runs-on: ubuntu-16.04
     steps:
-      - uses: actions/checkout@master
-      - uses: ./actions/automerge@master
+      - name: Checkout source code.   # 레포지토리 체크아웃
+        uses: actions/checkout@master
+      - uses: ./actions/automerge
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }} # The `GITHUB_TOKEN` secret.
           release: release # The `release` branch.
