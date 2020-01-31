@@ -5,4 +5,4 @@ on: push
 jobs:
   create-auto-pr:
     name: Gitflow Automation
-    runs: git pull master release
+    run: git pull master release
