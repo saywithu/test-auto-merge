@@ -7,17 +7,15 @@ on:
 
 jobs:
   build:
-    name: automerge
+    name: 자동머지
     runs-on: ubuntu-16.04
     steps:
-      - name: Action automerge
-        uses: saywithu/gitflow-action@master
+      - uses: saywithu/gitflow-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }} # GITHUB_TOKEN
           release: preview # release 브랜치 이름
           qa: qa # qa 브랜치 이름
           dev: dev # dev 브랜치 이름
           master: master # master 브랜치 이름
-          label: automerge # label이 automerge인 경우에만 push되고 merge될 수 있다.
+          label: automerge # 풀리퀘 생성시 라벨, 없을 경우 새로 추가함.
           auto-merge-branches: release,qa # 여러 브랜치를 자동머지 할 경우에는 브랜치를 컴마 구분한다. 예) release,qa 주의) release: preview와 같을 경우 key이름(release)을 적을것
-          require-merge: false # If an attempted merge fails, the action is considered to have failed.
